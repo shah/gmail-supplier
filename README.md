@@ -24,3 +24,24 @@ You can also run without compiling first:
 
     npm test
 
+# Using module via GitHub NPM Registry
+
+In the repo that will use this module, create an `.npmrc` with the following:
+
+    registry=https://npm.pkg.github.com/shah
+
+Add the module to your `package.json` and then:
+
+    npm install
+
+# Publishing to GitHub NPM Registry
+
+Update the version information, at least once in your local repo make sure that you've logged into to NPM registry:
+
+    npm login --registry=https://npm.pkg.github.com
+
+When asked, give your GitHub ID, password is your GitHub Personal Access Token (PAT) in `$HOME/.engrsb/.secrets.env`, and email.
+
+Then:
+
+    npm publish

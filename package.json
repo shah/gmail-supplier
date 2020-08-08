@@ -1,7 +1,7 @@
 {
-    "name": "gmail-supplier",
-    "version": "1.0.0",
-    "description": "Reads Gmail mailbox and calls functions with typed messages",
+    "name": "@shah/gmail-supplier",
+    "version": "0.0.1",
+    "description": "Reads Gmail mailbox and calls functions with typesafe message instances",
     "main": "dist/test.js",
     "typings": "dist/test",
     "scripts": {
@@ -9,8 +9,10 @@
         "test": "ts-node test.ts"
     },
     "repository": {
-        "type": "git",
-        "url": "git+https://github.com/shah/gmail-supplier.git"
+        "url": "git://github.com/shah/gmail-supplier.git"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
     },
     "keywords": [
         "googleapis",
