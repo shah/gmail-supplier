@@ -2,7 +2,7 @@ import { gmail_v1, google } from "googleapis";
 import * as gmail from "./gmail";
 import * as gapis from "./googleapis-auth";
 
-const apiAuth = gapis.authorize();
+const apiAuth = gapis.authorize(".secrets/api-access.json", new gapis.LocalFileCliCache(".secrets/stored-oauth-tokens.json"));
 if (gapis.isGoogleApiAuthorized(apiAuth)) {
     process.stdout.write("message_id,from_address,from_name,date,subject,labels,html_base64_length,html_length\n");
     const gmailAPI = google.gmail({ version: "v1", auth: apiAuth.authorizedApiClient });

@@ -1,4 +1,4 @@
-# Save GMail message as CSV
+# Read typed Gmail messages
 
 NodeJS module that reads an oAuth-authenticated GMail mailbox and calls functions with typed messages.
 

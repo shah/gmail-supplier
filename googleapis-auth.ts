@@ -42,8 +42,7 @@ export function consoleGoogleApiClientAccessParamsErrorHandler(clientAccessParam
 }
 
 export function authorize(
-    clientAccessParamsSource: FlexibleParamsSource = ".secrets/api-access.json",
-    cc: GoogleAuthCredentialsCache = new LocalFileCliCache(".secrets/stored-oauth-tokens.json"),
+    clientAccessParamsSource: FlexibleParamsSource, cc: GoogleAuthCredentialsCache,
     onError: GoogleApiClientAccessParamsErrorHandler = consoleGoogleApiClientAccessParamsErrorHandler): GoogleApiAuthorization | GoogleApiAuthorizedClient | undefined {
     try {
         const clientAccessParamsBuff = fs.readFileSync(clientAccessParamsSource);
