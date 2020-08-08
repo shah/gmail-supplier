@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "outDir": "dist",
+        "declaration": true,
         "sourceMap": true,
         "target": "es6",
         "lib": [
@@ -13,11 +14,12 @@
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "strict": true,
+        "alwaysStrict": true,
         "noImplicitAny": true,
         "forceConsistentCasingInFileNames": true,
-        "module": "commonjs",
+        "module": "umd",
         "moduleResolution": "node",
-        "resolveJsonModule": true,
+        "resolveJsonModule": false,
         "isolatedModules": true,
         "noEmit": false,
         "jsx": "preserve",
@@ -32,6 +34,7 @@
     ],
     "exclude": [
         "**/node_modules",
+        "dist",
         "**/.*/"
     ],
 }

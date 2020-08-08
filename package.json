@@ -1,11 +1,16 @@
 {
     "name": "@shah/gmail-supplier",
-    "version": "0.0.1",
+    "version": "0.0.6",
     "description": "Reads Gmail mailbox and calls functions with typesafe message instances",
-    "main": "dist/test.js",
-    "typings": "dist/test",
+    "main": "dist/gmail.js",
+    "types": "dist/gmail.d.ts",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "start": "ts-node test.ts",
+        "prepublishOnly": "tsc --project tsconfig.json",
+        "build": "tsc --project tsconfig.json",
         "test": "ts-node test.ts"
     },
     "repository": {
