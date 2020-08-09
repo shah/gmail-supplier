@@ -1,6 +1,6 @@
 {
     "name": "@shah/gmail-supplier",
-    "version": "0.0.6",
+    "version": "0.1.0",
     "description": "Reads Gmail mailbox and calls functions with typesafe message instances",
     "main": "dist/gmail.js",
     "types": "dist/gmail.d.ts",
@@ -27,7 +27,7 @@
     "license": "MIT",
     "dependencies": {
         "email-addresses": "^3.1.0",
-        "googleapis": "^56.0.0"
+        "@shah/googleapis-auth": "0.0.1"
     },
     "bugs": {
         "url": "https://github.com/shah/gmail-supplier/issues"
